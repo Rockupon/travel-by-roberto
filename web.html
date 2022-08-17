@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webstyle.css">
+    <title>Document</title>
+    <style type="text/css" media="all">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h1 {
+    text-transform: uppercase;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0 30px;
+    text-transform: capitalize;
+}
+
+.active{
+    color: pink;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./header-bg.png');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 4vmin; /*   4vmin   */
+    text-transform: capitalize;
+    
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background-color: pink;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.ctn {
+    padding: 8px 15px;
+    background-color: pink;
+    border-radius: 30px;
+    text-transform: capitalize;
+    color: whitesmoke;
+}
+
+.menubtn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    width: 80%;
+    margin:80px auto;
+    
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(145, 145, 145);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.events .row{
+    margin: 50px;
+    
+}
+
+.row .col{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    
+    
+    
+}
+.row .col h4{
+    
+    margin: 20px auto;
+    font-size: 5vmin;
+    color: rgb(116, 115, 115);;
+}
+
+.row .col a{
+    width: 20%;
+    justify-self: center;
+}
+
+.row .col img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+p{
+    color: rgb(112, 112, 112);
+    padding: 0px 40px;
+    
+}
+
+.events .ctn{
+    margin-top: 30px;
+}
+
+.explore{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./bg2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+    grid-template-rows:99% ;
+}
+
+.explore-content{
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.explore-content h1{
+    font-size: 7vmin;
+}
+
+.explore-content p {
+    color: white;
+}
+
+.explore-content .line{
+    margin-bottom: 50px;
+}
+
+.explore-content .ctn {
+    margin-top: 40px;
+}
+
+
+
+.tours .loko{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.tours .loko .roco{
+    margin: auto 0;
+}
+
+.tours .loko .roco .line{
+    position: relative;
+    right: 95px;
+}
+
+.tours .loko .roco p{
+    position: relative;
+    right: 39px;
+}
+
+.tours .loko .roco a{
+    position: absolute;
+}
+
+.tours .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-gallery img{
+    width: 250px;
+    margin: 10px;
+}
+
+footer{
+    background-color: rgb(93, 123, 143);
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    color: darkslategrey;
+}
+
+@media only screen and (max-width:850px){
+    nav{
+        padding: 0;
+    }
+
+    .logo{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+    .nav-list{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: plum;
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+
+    .menubtn{
+        margin-top: 0px;
+        display: block;
+    }
+
+    .mobliemenu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-list li {
+        margin: 30px auto;
+    }
+
+    .row{
+       
+        grid-template-columns: 1fr;
+        position: relative;
+        right: 50px;
+    }
+
+    .row .col a{
+        margin-bottom: 20px;
+        width: 40%;
+        text-align: center;
+    }
+
+    
+    .tours .loko{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        
+    }
+    
+    .tours .loko .roco{
+        justify-self:center;
+        
+    }
+
+    .tours .loko .roco .line{
+        position: relative;
+        right: 118px;
+    }
+
+    
+    .tours{
+      
+        justify-content: center;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="logo">adventure</h1>
+        <ul class="nav-list">
+            <li class="active"><a href="#"></a>home</li>
+            <li><a href="#"></a>tour</li>
+            <li><a href="#"></a>explore</li>
+            <li><a href="#"></a>about</li>
+            <li class="ctn"><a  href="#"></a>contact</li>
+        </ul>
+        <img class="menubtn" src="./menu-btn.png" alt="ddd">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>explore the colorful world</h2>
+            <div class="line"></div>
+            <h1>a wonderful gift</h1>
+            <a href="#" class="ctn">learn more</a>
+        </div>
+    </header>
+
+    <section class="events">
+        <div class="title">
+            <h1>upcoming events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./img1.png" alt="ss">
+                <h4>Everst Camp Trek</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae possimus, alias debitis, magni deserunt cumque rem vel animi repudiandae modi error dolorum recusandae. Nesciunt qui quia tenetur consectetur repudiandae?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="./img2.png" alt="ss">
+                <h4>Walking Holidays</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae possimus, alias debitis, magni deserunt cumque rem vel animi repudiandae modi error dolorum recusandae. Nesciunt qui quia tenetur consectetur repudiandae?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-content">
+            <h1>EXPLORE THE WORLD</h1>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id culpa corporis voluptas exercitationem ut corrupti modi consectetur pariatur iste asperiores, illo eos, praesentium saepe itaque harum tempore dicta velit vel!</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="tours">
+        <div class="loko">
+            <div class="roco content-col">
+                <h1>UPCOMING TOURS & DESTINATTION</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis, doloribus, repudiandae ipsam corporis perspiciatis sapiente cumque accusantium vero obcaecati laboriosam.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="roco image-col">
+                <div class="image-gallery">
+                    <img src="./img3.png" alt="gdg">
+                    <img src="./img4.png" alt="gdg">
+                    <img src="./img5.png" alt="gdg">
+                    <img src="./img6.png" alt="gdg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>123 Fifth Avenue, NY 10160, New York,Usa | Phone: 800-123-456 | Email: Contact@gmail.com</p>
+        <p>Copyright @ 2020 Outdoor Adventure | MADE BY ROBERTO</p>
+    </footer>
+    <script>
+        const menubtn = document.querySelector('.menubtn')
+        const navlist = document.querySelector('.nav-list')
+
+        menubtn.addEventListener('click',()=>{
+            navlist.classList.toggle('mobliemenu')
+        })
+    </script>
+</body>
+</html>
